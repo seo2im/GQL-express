@@ -7,7 +7,7 @@ const resolver = {
 		},
 
 		me : (_, { id }, context) => {
-			return Users.find(user => user.id === id)[0];
+			return Users.find(user => user.id === id);
 		}
 	}
 }

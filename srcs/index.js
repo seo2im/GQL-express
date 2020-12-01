@@ -2,11 +2,9 @@ import { bodyParserGraphQL } from 'body-parser-graphql'
 import express from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import compression from 'compression'
-import fs from 'fs'
 
-
-const typeDefs = fs.readFileSync("schema.graphql", { encoding : 'utf-8'});
-import resolver from './Resolver'
+import typeDefs from './schema'
+import resolvers from './Resolver'
 
 const app = express();
 app.use(bodyParserGraphQL());
